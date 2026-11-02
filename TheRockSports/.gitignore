@@ -1,0 +1,46 @@
+# ==============================
+# ARCHIVOS COMPILADOS DE JAVA
+# ==============================
+*.class
+bin/
+out/
+build/
+
+# ==============================
+# CONFIGURACIÓN DE IDEs
+# ==============================
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+nbproject/private/
+
+# ==============================
+# ARCHIVOS TEMPORALES
+# ==============================
+*.log
+*.tmp
+*.bak
+*~
+*.swp
+*.swo
+
+# ==============================
+# SISTEMA OPERATIVO
+# ==============================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==============================
+# VARIABLES DE ENTORNO
+# ==============================
+.env
+.env.local
+
+# ==============================
+# OTROS
+# ==============================
+*.orig
