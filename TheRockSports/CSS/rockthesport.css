@@ -1,0 +1,452 @@
+CONFIGURACIÓN GENERAL*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos generales de toda la página. */
+body {
+    background-color: #10151E; 
+    color: #F5F7FA;            
+    font-family: Arial, sans-serif;
+    margin: 0;                 
+    line-height: 1.5;        
+}
+
+img {
+    max-width: 100%;
+}
+
+/*CABECERA PRINCIPAL*/
+
+.cabecera-principal {
+    background-color: #172333;
+
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;          
+
+    padding: 20px 5%;              
+    gap: 20px;                     
+    flex-wrap: wrap;             
+}
+header h1 {
+    color: #FFFFFF;
+    font-size: 1.75rem;  
+    margin: 0;
+}
+
+header h1 span {
+    color: #00D9FF;     
+}
+
+/*MENÚ DE NAVEGACIÓN */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;  /* Quita el subrayado */
+    font-size: 0.9375rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #00D9FF;
+}
+
+
+/*PORTADA PRINCIPAL*/
+
+#inicio {
+    text-align: center;
+    padding: 40px 5% 60px;
+    background-color: #10151E;
+}
+
+/* Imagen principal de la portada. */
+#inicio img {
+    display: block;
+    width: 100%;         
+    max-width: 1100px;   
+    height: auto;       
+    aspect-ratio: 1100 / 420;
+    object-fit: cover;  
+    border-radius: 15px;
+    margin: 0 auto;    
+}
+
+
+#inicio h2 {
+    color: #FFFFFF;
+    font-size: clamp(1.75rem, 4vw, 2.625rem);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+#inicio p {
+    color: #C1CDDA;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+
+/*BOTONES DE LA PORTADA*/
+
+.botones-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton-principal {
+    display: inline-block;
+    background-color: #00D9FF;
+    color: #10151E;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.boton-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #00D9FF;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.boton-principal:hover {
+    background-color: #FF6B00;
+}
+
+.boton-secundario:hover {
+    background-color: #00D9FF;
+    color: #10151E;
+}
+
+
+/*EVENTOS DESTACADOS*/
+
+.seccion-eventos {
+    padding: 50px 5%;
+}
+
+.contenedor-eventos {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 25px;
+}
+
+/* Diseño de cada tarjeta. */
+.contenedor-eventos article {
+    background-color: #172333;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #2A3B50;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.contenedor-eventos article:hover {
+    transform: translateY(-8px);
+    border-color: #00D9FF;
+}
+.contenedor-eventos article img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*FORMULARIO DE INSCRIPCIÓN */
+
+.seccion-inscripcion {
+    padding: 50px 5%;
+}
+.seccion-inscripcion h2,
+.seccion-inscripcion > p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#formulario-inscripcion {
+    background-color: #172333;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #2A3B56;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#formulario-inscripcion label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#formulario-inscripcion input:not([type="checkbox"]),
+#formulario-inscripcion select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #2A3B56;
+    font-size: 16px;
+}
+
+#formulario-inscripcion .aceptacion {
+    margin-top: 20px;
+}
+
+#formulario-inscripcion .aceptacion label {
+    display: inline;
+    font-weight: normal;
+}
+
+#formulario-inscripcion button {
+    background-color: #00D9FF;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+#formulario-inscripcion button:hover {
+    background-color: #FF6B00;
+}
+/* CALENDARIO DE EVENTOS DEPORTIVOS */
+
+.seccion-calendario {
+    padding: 50px 5%;
+}
+
+.seccion-calendario table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #172333;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.seccion-calendario th {
+    background-color: #22354D;
+    color: #00D9FF;
+    padding: 18px;
+    text-align: left;
+}
+
+.seccion-calendario td {
+    padding: 18px;
+    border-bottom: 1px solid #2A3B56;
+}
+
+.seccion-calendario caption {
+    padding: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .seccion-calendario {
+        overflow-x: auto;
+    }
+
+    .seccion-calendario table {
+        min-width: 600px;
+    }
+}
+/*DEPORTES */
+  
+
+.seccion-deportes {
+    padding: 50px 5%;
+}
+
+.contenedor-deportes {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: 25px;
+   
+}
+
+.contenedor-deportes article {
+    background-color: #172333;
+    border: 1px solid #2A3B50;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.contenedor-deportes article:hover {
+    transform: translateY(-8px);
+    border-color: #00D9FF;
+}
+
+.contenedor-deportes article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/*CÓMO FUNCIONA ROCKTHESPORTs*/
+.seccion-funcionamiento {
+    padding: 50px 5%;
+}
+.contenedor-pasos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+.contenedor-pasos article {
+    background-color: #172333;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #2A3B50;
+}
+/*SECCIÓN ORGANIZADORES*/
+.seccion-organizadores {
+    background-color: #172333;
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 15px;
+    margin: 40px 5%;
+}
+
+.boton-organizadores {
+    display: inline-block;
+    background-color: #00D9FF;
+    color: #000000;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.boton-organizadores:hover {
+    background-color: #FF6B00;
+}
+/*PIE DE PÁGINA */
+footer {
+    background-color: #172333;
+    padding: 30px 5%;
+    border-radius: 15px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+/*ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 1024px) {
+    .contenedor-deportes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .contenedor-pasos {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cabecera-principal {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.875rem;
+    }
+
+    #inicio {
+        padding: 25px 15px 40px;
+    }
+
+    #inicio img {
+        aspect-ratio: 4 / 3;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    .seccion-eventos {
+        padding: 30px 15px;
+    }
+    .contenedor-deportes {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .contenedor-pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-organizadores {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.8125rem;
+    }
+    .botones-inicio {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .boton-secundario {
+        width: 100%;
+    }
+    .contenedor-eventos article,
+    .contenedor-deportes article,
+    .contenedor-pasos article {
+        padding: 15px;
+    }
+    .boton-organizadores {
+        display: block;
+        width: 100%;
+    }
+}
