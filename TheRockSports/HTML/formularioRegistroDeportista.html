@@ -16,22 +16,22 @@
                 <h2>Regístrate</h2>
 
                 <div class="campo-form">
-                    <label for="usuario">Correo electrónico</label>
+                    <label for="usuario">Correo electrónico*</label>
                     <input type="email" name="usuario" id="usuario" placeholder="ejemplo@ejemplo.es" required>
                 </div>
 
                 <div class="campo-form">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+                    <label for="contrasena">Contraseña*</label>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z@$!%*?&]{8,}$"  title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial." required>
                 </div>
 
                 <div class="campo-form">
-                    <label for="fechanacimiento">Fecha de nacimiento</label>
+                    <label for="fechanacimiento">Fecha de nacimiento*</label>
                     <input type="date" id="fechanacimiento" name="fechanacimiento" required>
                 </div>
 
                 <div class="campo-form">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre*</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
                 </div>
 
