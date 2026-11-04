@@ -1,4 +1,4 @@
-CONFIGURACIÓN GENERAL*/
+/* CONFIGURACIÓN GENERAL */
 
 * {
     box-sizing: border-box;
@@ -17,19 +17,18 @@ img {
     max-width: 100%;
 }
 
-/*CABECERA PRINCIPAL*/
+/* CABECERA PRINCIPAL */
 
 .cabecera-principal {
     background-color: #172333;
-
     display: flex;                 
     justify-content: space-between; 
     align-items: center;          
-
     padding: 20px 5%;              
     gap: 20px;                     
     flex-wrap: wrap;             
 }
+
 header h1 {
     color: #FFFFFF;
     font-size: 1.75rem;  
@@ -40,7 +39,7 @@ header h1 span {
     color: #00D9FF;     
 }
 
-/*MENÚ DE NAVEGACIÓN */
+/* MENÚ DE NAVEGACIÓN */
 
 nav {
     display: flex;
@@ -48,6 +47,7 @@ nav {
     gap: 25px;
     flex-wrap: wrap;
 }
+
 nav a {
     color: #FFFFFF;
     text-decoration: none;  /* Quita el subrayado */
@@ -56,12 +56,25 @@ nav a {
     text-transform: uppercase;
     transition: color 0.3s;
 }
+
 nav a:hover {
     color: #00D9FF;
 }
 
+.btn-iniciar-sesion {
+    background-color: #00D9FF;
+    color: #10151E ;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-/*PORTADA PRINCIPAL*/
+.btn-iniciar-sesion:hover {
+    background-color: #FF6B00;
+    color: #FFFFFF ;
+}
+
+/* PORTADA PRINCIPAL */
 
 #inicio {
     text-align: center;
@@ -81,14 +94,12 @@ nav a:hover {
     margin: 0 auto;    
 }
 
-
 #inicio h2 {
     color: #FFFFFF;
     font-size: clamp(1.75rem, 4vw, 2.625rem);
     margin-top: 30px;
     margin-bottom: 15px;
 }
-
 
 #inicio p {
     color: #C1CDDA;
@@ -98,8 +109,7 @@ nav a:hover {
     margin: 0 auto 30px;
 }
 
-
-/*BOTONES DE LA PORTADA*/
+/* BOTONES DE LA PORTADA */
 
 .botones-inicio {
     display: flex;
@@ -131,7 +141,6 @@ nav a:hover {
     text-align: center;
 }
 
-
 .boton-principal:hover {
     background-color: #FF6B00;
 }
@@ -141,8 +150,7 @@ nav a:hover {
     color: #10151E;
 }
 
-
-/*EVENTOS DESTACADOS*/
+/* EVENTOS DESTACADOS */
 
 .seccion-eventos {
     padding: 50px 5%;
@@ -150,8 +158,7 @@ nav a:hover {
 
 .contenedor-eventos {
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: 25px;
 }
 
@@ -168,6 +175,7 @@ nav a:hover {
     transform: translateY(-8px);
     border-color: #00D9FF;
 }
+
 .contenedor-eventos article img {
     width: 100%;
     height: 230px;
@@ -175,11 +183,12 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/*FORMULARIO DE INSCRIPCIÓN */
+/* FORMULARIO DE INSCRIPCIÓN */
 
 .seccion-inscripcion {
     padding: 50px 5%;
 }
+
 .seccion-inscripcion h2,
 .seccion-inscripcion > p {
     max-width: 600px;
@@ -236,6 +245,7 @@ nav a:hover {
 #formulario-inscripcion button:hover {
     background-color: #FF6B00;
 }
+
 /* CALENDARIO DE EVENTOS DEPORTIVOS */
 
 .seccion-calendario {
@@ -250,6 +260,7 @@ nav a:hover {
     border-radius: 15px;
     overflow: hidden;
 }
+
 .seccion-calendario th {
     background-color: #22354D;
     color: #00D9FF;
@@ -267,17 +278,7 @@ nav a:hover {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .seccion-calendario {
-        overflow-x: auto;
-    }
-
-    .seccion-calendario table {
-        min-width: 600px;
-    }
-}
-/*DEPORTES */
-  
+/* DEPORTES */
 
 .seccion-deportes {
     padding: 50px 5%;
@@ -285,10 +286,8 @@ nav a:hover {
 
 .contenedor-deportes {
     display: grid;
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
-   
 }
 
 .contenedor-deportes article {
@@ -310,22 +309,28 @@ nav a:hover {
     object-fit: cover;
     border-radius: 10px;
 }
-/*CÓMO FUNCIONA ROCKTHESPORTs*/
+
+/* CÓMO FUNCIONA ROCKTHESPORTS */
+
 .seccion-funcionamiento {
     padding: 50px 5%;
 }
+
 .contenedor-pasos {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
+
 .contenedor-pasos article {
     background-color: #172333;
     padding: 25px;
     border-radius: 15px;
     border: 1px solid #2A3B50;
 }
-/*SECCIÓN ORGANIZADORES*/
+
+/* SECCIÓN ORGANIZADORES */
+
 .seccion-organizadores {
     background-color: #172333;
     padding: clamp(20px, 4vw, 40px);
@@ -347,7 +352,9 @@ nav a:hover {
 .boton-organizadores:hover {
     background-color: #FF6B00;
 }
-/*PIE DE PÁGINA */
+
+/* PIE DE PÁGINA */
+
 footer {
     background-color: #172333;
     padding: 30px 5%;
@@ -357,7 +364,160 @@ footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
 }
-/*ADAPTACIÓN PARA TABLETS */
+
+/* ==========================================================================
+   ESTILOS PARA FORMULARIOS DE INICIO DE SESIÓN Y REGISTRO
+   ========================================================================== */
+
+/* Contenedores de secciones principales */
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 40px 5%;
+}
+
+.inicio-sesion,
+.registro {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+}
+
+/* Cajas de formulario */
+.formulario-inicio-sesion,
+.formulario-registro {
+    background-color: #172333;
+    padding: 35px 30px;
+    border-radius: 15px;
+    border: 1px solid #2A3B56;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.formulario-inicio-sesion h2,
+.formulario-registro h2 {
+    color: #FFFFFF;
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Campos de entrada */
+.campo-form {
+    margin-bottom: 20px;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #F5F7FA;
+    font-size: 0.9375rem;
+}
+
+.campo-form input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #2A3B56;
+    background-color: #10151E;
+    color: #FFFFFF;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.campo-form input:not([type="checkbox"]):focus {
+    border-color: #00D9FF;
+}
+
+.campo-form input::placeholder {
+    color: #6C7D93;
+}
+
+/* Campo Checkbox personalizado */
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.campo-checkbox label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #C1CDDA;
+    cursor: pointer;
+}
+
+.campo-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #00D9FF;
+    cursor: pointer;
+}
+
+/* Botón de envío submit */
+.btn-enviar {
+    width: 100%;
+    background-color: #00D9FF;
+    color: #10151E;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+}
+
+/* Enlaces del formulario */
+.enlaces-formulario {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.enlaces-formulario a {
+    color: #00D9FF;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+
+.enlaces-formulario a:hover {
+    color: #FF6B00;
+    text-decoration: underline;
+}
+
+/* Botón Volver */
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    color: #00D9FF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9375rem;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.btn-volver:hover {
+    color: #FF6B00;
+}
+
+/* ADAPTACIÓN RESPONSIVA */
 
 @media (max-width: 1024px) {
     .contenedor-deportes {
@@ -371,7 +531,6 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
 
 @media (max-width: 768px) {
     .cabecera-principal {
@@ -419,10 +578,19 @@ footer {
     }
 
     footer {
-        grid-template-columns: 1fr;
+        grid-direction: 1fr;
         padding: 25px 20px;
     }
+
+    .seccion-calendario {
+        overflow-x: auto;
+    }
+
+    .seccion-calendario table {
+        min-width: 600px;
+    }
 }
+
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.5rem;
@@ -448,5 +616,9 @@ footer {
     .boton-organizadores {
         display: block;
         width: 100%;
+    }
+    .formulario-inicio-sesion,
+    .formulario-registro {
+        padding: 25px 20px;
     }
 }
