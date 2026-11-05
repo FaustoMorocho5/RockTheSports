@@ -179,7 +179,7 @@
 
     <!-- TABLA DE EVENTOS DEPORTIVOS -->
             
-<section id="calendario" class="calendario">
+<section id="calendario" class="seccion-calendario">
     <h2>Calendario de eventos deportivos</h2>
 
     <p>Consulta los eventos y encuentra tu próximo reto.</p>
@@ -414,13 +414,18 @@
                         <label for="telefono">Teléfono:</label>
                             <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono" required>
 
+                        
                         <label for="evento">Selecciona un evento:</label>
-                            <select id="evento" name="evento" required>
-                                <option value="">-- Elige un evento --</option>
-                                <option value="behobia">Behobia - San Sebastián</option>
-                                <option value="maraton">Maratón de San Sebastián</option>
-                                <option value="irun">Carrera de Irún</option>
+                        <select id="evento" name="evento" required>
+                            <option value="">-- Elige un evento --</option>
+                            <option value="carrera10k">Carrera 10K - Donostia</option>
+                            <option value="futbol7">Torneo de fútbol 7 - Irún</option>
+                            <option value="padel">Torneo de pádel - Hondarribia</option>
+                            <option value="baloncesto">Torneo de baloncesto - Donostia</option>
+                            <option value="ciclismo">Carrera de ciclismo - Irún</option>
+                            <option value="media-maraton">Media maratón - Donostia</option>
                             </select>
+
 
                          <div class="aceptacion">
                             <input type="checkbox" id="condiciones" name="condiciones" required>
