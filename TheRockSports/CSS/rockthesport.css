@@ -152,13 +152,13 @@ nav a:hover {
 
 /* EVENTOS DESTACADOS */
 
-.seccion-eventos {
+.eventos {
     padding: 50px 5%;
 }
 
 .contenedor-eventos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+   grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -178,11 +178,29 @@ nav a:hover {
 
 .contenedor-eventos article img {
     width: 100%;
-    height: 230px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
+/* BOTONES DE INSCRIPCIÓN DE EVENTOS */
 
+.boton-evento {
+    display: inline-block;
+    background-color: #00D9FF;
+    color: #10151E;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-evento:hover {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
 /* FORMULARIO DE INSCRIPCIÓN */
 
 .seccion-inscripcion {
@@ -246,47 +264,63 @@ nav a:hover {
     background-color: #FF6B00;
 }
 
+
 /* CALENDARIO DE EVENTOS DEPORTIVOS */
 
 .seccion-calendario {
     padding: 50px 5%;
+    min-width: 0;
+}
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+    border-radius: 15px;
+    border: 1px solid #2A3B56;
 }
 
 .seccion-calendario table {
     width: 100%;
+    min-width: 750px;
     border-collapse: collapse;
-    margin-top: 25px;
     background-color: #172333;
-    border-radius: 15px;
-    overflow: hidden;
 }
 
 .seccion-calendario th {
     background-color: #22354D;
     color: #00D9FF;
-    padding: 18px;
+    padding: 15px;
     text-align: left;
+    white-space: nowrap;
 }
 
 .seccion-calendario td {
-    padding: 18px;
+    padding: 15px;
     border-bottom: 1px solid #2A3B56;
+    white-space: nowrap;
+}
+
+.seccion-calendario tbody tr:hover {
+    background-color: #22354D;
 }
 
 .seccion-calendario caption {
     padding: 15px;
     font-weight: bold;
+    text-align: center;
 }
+
 
 /* DEPORTES */
 
-.seccion-deportes {
+.deportes {
     padding: 50px 5%;
 }
 
 .contenedor-deportes {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+   grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -305,8 +339,8 @@ nav a:hover {
 
 .contenedor-deportes article img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -517,30 +551,46 @@ footer {
     color: #FF6B00;
 }
 
+
 /* ADAPTACIÓN RESPONSIVA */
 
-@media (max-width: 1024px) {
+/* TABLETS: hasta 1100px */
+@media (max-width: 1100px) {
+
+    .cabecera-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contenedor-eventos,
     .contenedor-deportes {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
     .contenedor-pasos {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    
 }
 
+/* MÓVILES: hasta 768px */
 @media (max-width: 768px) {
+
     .cabecera-principal {
-        flex-direction: column;
-        align-items: center;
         padding: 20px;
     }
 
     nav {
-        justify-content: center;
         gap: 15px;
     }
 
@@ -560,16 +610,14 @@ footer {
         font-size: 1rem;
     }
 
-    .seccion-eventos {
+    .eventos {
         padding: 30px 15px;
     }
-    .contenedor-deportes {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
 
+    .contenedor-eventos,
+    .contenedor-deportes,
     .contenedor-pasos {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .seccion-organizadores {
@@ -578,16 +626,8 @@ footer {
     }
 
     footer {
-        grid-direction: 1fr;
+        grid-template-columns: 1fr;
         padding: 25px 20px;
-    }
-
-    .seccion-calendario {
-        overflow-x: auto;
-    }
-
-    .seccion-calendario table {
-        min-width: 600px;
     }
 }
 
