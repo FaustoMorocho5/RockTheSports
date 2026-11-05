@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - RockTheSports </title>
+    <link rel="stylesheet" href="../CSS/rockthesport.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+    <section class="registro">
+        <a href="frmularioinisiosesion.html" class="btn-volver" aria-label="Volver al inicio de sesión">&larr; Volver</a>
+
+        <div class="formulario-registro">
+            <form action="frmularioinisiosesion.html" method="POST">
+                <h2>Regístrate</h2>
+
+                <div class="campo-form">
+                    <label for="usuario">Correo electrónico*</label>
+                    <input type="email" name="usuario" id="usuario" placeholder="ejemplo@ejemplo.es" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="contrasena">Contraseña*</label>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z@$!%*?&]{8,}$"  title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial." required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="fechanacimiento">Fecha de nacimiento*</label>
+                    <input type="date" id="fechanacimiento" name="fechanacimiento" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="nombre">Nombre*</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="campo-form campo-checkbox">
+                    <input type="checkbox" id="aceptarterminosycondiciones" name="aceptarterminosycondiciones" value="si" required>
+                    <label for="aceptarterminosycondiciones">Aceptar términos y condiciones</label>
+                </div>
+
+                <button type="submit" class="btn-enviar">Registrarse</button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>
